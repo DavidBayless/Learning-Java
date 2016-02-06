@@ -24,6 +24,7 @@ class DataTypes {
     long bigNum = 2140000001;
     double lotsOfDecimals = 2.340583405830927037452348509238405893059;
 
+    // blahblahblah
     System.out.println("String: " + string);
     System.out.println("char: " + character);
     System.out.println("int: " + number);
