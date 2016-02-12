@@ -1,19 +1,44 @@
 class Fibonacci {
   public static void main( String[]args ) {
-    int currNum = 1;
-    int prevNum = 0;
-    int numHold = 0;
-    int degree = 100;
+    long currNum = 1;
+    long prevNum = 0;
+    long numHold = 0;
+    long degree = 33;
 
-    for (int i = 0; i < degree; i++ ) {
-      if (i == 0) {
-        System.out.println(i);
-      } else {
-        System.out.println(currNum);
-        numHold = currNum;
-        currNum += prevNum;
-        prevNum = numHold;
-      }
+    for (long i = 1; i < degree; i++ ) {
+      numHold = currNum;
+      currNum += prevNum;
+      prevNum = numHold;
     }
+    System.out.println(currNum);
   }
 }
+
+public class BigInteger
+    extends Number
+        implements Comparable<BigInteger>
+
+          public class Problem025
+          {
+          	public static void main(String[] args)
+          	{
+          		long begin = System.currentTimeMillis();
+
+          		BigInteger a = BigInteger.valueOf(1);
+          		BigInteger b = BigInteger.valueOf(2);
+          		BigInteger c = BigInteger.valueOf(0);
+          		BigInteger MAX = new BigInteger("1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+
+          		int i = 3;
+          		for (i = 3; b.compareTo(MAX) < 0; i++)
+          		{
+          			c = a.add(b);
+          			a = b;
+          			b = c;
+          		}
+          		System.out.println("i: " + i);
+
+          		long end = System.currentTimeMillis();
+          		System.out.println(end - begin + "ms");
+          	}
+          }
