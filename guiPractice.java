@@ -2,8 +2,6 @@ import javax.swing.*;
 
 class Window extends JFrame{
   JPanel pnl = new JPanel();
-  ImageIcon tick = new ImageIcon( "tick.png" );
-  ImageIcon cross = new ImageIcon( "cross.png");
 
   public Window() {
     super( "Swing Window");
